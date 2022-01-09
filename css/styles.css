@@ -53,17 +53,44 @@ input[type=number] {
     margin: 3.125rem 0 2.543rem;
 }
 
+@media (min-width: 1200px) {
+    .header {
+        margin: 10.188rem 0 5.491rem;
+    }
+}
+
 .main {
     background-color: var(--white);
     border-radius: 25px 25px 0 0;
+    width: 100%;
+    max-width: 920px;
+    margin: 0 auto;
+    box-shadow: 0px 32px 43px rgba(79, 166, 175, 0.200735);
+}
+
+@media (min-width: 1200px) {
+    .main {
+        border-radius: 25px;
+        display: grid;
+        grid-template-columns: 46.41% 48.37%;
+        align-items: center;
+        gap: 3rem;
+    }
 }
 
 .bill {
     padding: 2rem;
 }
 
+@media (min-width: 1200px) {
+    .bill {
+        padding: 2.813rem 0 3rem 3rem;
+        display: inline-block;
+    }
+}
+
 .input-group label {
-    display: block;
+    display: inline-block;
     font-weight: 700;
     color: var(--darkGrayishCyan);
 }
@@ -116,6 +143,12 @@ input[type=number] {
     margin: 2rem 0;
 }
 
+@media (min-width: 1200px) {
+    .tips {
+        margin: 2.5rem 0;
+    }
+}
+
 .tips-title {
     font-weight: 700;
     color: var(--darkGrayishCyan);
@@ -128,6 +161,13 @@ input[type=number] {
     grid-template-columns: repeat(2,1fr);
     row-gap: 1rem;
     column-gap: 1.063rem;
+}
+
+@media (min-width: 1200px) {
+    .tips-container {
+        grid-template-columns: repeat(3,1fr);
+        column-gap: 0.875rem;
+    }
 }
 
 .tip {
@@ -160,6 +200,12 @@ input[type=number] {
     text-align: right;
 }
 
+@media (min-width: 1200px) {
+    .input-tip {
+        padding: 0.25rem 0.938rem 0.25rem 0;
+    }
+}
+
 .input-tip:focus {
     border: 2px solid var(--strongCyan);
 }
@@ -179,11 +225,23 @@ input[type=number] {
     padding: 0 1.5rem 2rem;
 } 
 
+@media (min-width: 1200px) {
+    .result {
+        padding: 2rem 2rem 2rem 0;
+    }
+}
+
 .result-container {
     background-color: var(--veryDarkCyan);
     border-radius: 15px;
     padding: 2.313rem 1.375rem 1.5rem 1.5rem;
     color: #ffffff;
+}
+
+@media (min-width: 1200px) {
+    .result-container {
+        padding: 2.5rem;
+    }
 }
 
 .result-text {
@@ -196,6 +254,12 @@ input[type=number] {
 
 .result-text:first-of-type {
     margin-bottom: 1.25rem;
+}
+
+@media (min-width: 1200px) {
+    .result-text:first-of-type {
+        margin-bottom: 1.563rem;
+    }
 }
 
 .result-text .tip-amount span,
@@ -211,6 +275,13 @@ input[type=number] {
     letter-spacing: -0.67px;
 }
 
+@media (min-width: 1200px) {
+    .result-text .price {
+        font-size: 3rem;
+        line-height: 71px;
+    }
+}
+
 .btn-reset {
     width: 100%;
     margin-top: 2rem;
@@ -224,4 +295,15 @@ input[type=number] {
     padding: 9.5px 0;
     border-radius: 5px;
     cursor: pointer;
+}
+
+@media (min-width: 1200px) {
+    .btn-reset {
+        margin-top: 7.625rem;
+    }
+}
+
+.btn-reset:disabled {
+    background-color: #0D686D;
+    cursor: not-allowed;
 }
