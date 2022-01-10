@@ -51,7 +51,7 @@ function validateBillInput(e) {
     const invalidFeedback = e.target.nextElementSibling;
     e.target.parentElement.classList.remove("is-valid");
 
-    if(billValue == "") {
+    if(isNaN(billValue)) {
         e.target.parentElement.classList.add("is-invalid");
         invalidFeedback.textContent = "Can't be Empty";
         billObj.bill = 0;
@@ -91,7 +91,7 @@ function validateNumberPeopleInput(e) {
     const invalidFeedback = e.target.nextElementSibling;
     e.target.parentElement.classList.remove("is-valid");
 
-    if(numberPeople == "") {
+    if(isNaN(numberPeople)) {
         e.target.parentElement.classList.add("is-invalid");
         invalidFeedback.textContent = "Can't be Empty";
         billObj.numberPeople = 0;
