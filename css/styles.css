@@ -89,6 +89,10 @@ input[type=number] {
     }
 }
 
+.input-group {
+    position: relative;
+}
+
 .input-group label {
     display: inline-block;
     font-weight: 700;
@@ -100,7 +104,7 @@ input[type=number] {
     width: 100%;
     appearance: none;
     -moz-appearance: textfield;
-    border: none;
+    border: 2px solid transparent;
     background-color: #f3f3fa;
     border-radius: 5px;
     font-family: inherit;
@@ -108,7 +112,7 @@ input[type=number] {
     font-size: 1.5rem;
     color: var(--veryDarkCyan);
     text-align: right;
-    padding: 0.375rem 1.093rem;
+    padding: 0.25rem 1.093rem;
     background-repeat: no-repeat;
 }
 
@@ -131,12 +135,34 @@ input[type=number] {
 
 .input-group .input:focus {
     outline: none;
+    border: 2px solid var(--strongCyan);
 }
 
 .input-group .input::-webkit-inner-spin-button,
 .input-group .input::-webkit-outer-spin-button {
     -webkit-appearance: none; 
     margin: 0; 
+}
+
+.invalid-feedback {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: #E17457;
+    font-weight: 700;
+}
+
+.input-group.is-valid > .input {
+    border: 2px solid var(--strongCyan);
+}
+
+.input-group.is-invalid > .input {
+    border: 2px solid #E17457;
+}
+
+.input-group.is-invalid > .invalid-feedback {
+    display: block;
 }
 
 .tips {
@@ -214,6 +240,10 @@ input[type=number] {
     background-color: #f3f9fa;
     color: var(--veryDarkCyan);
     border: 2px solid var(--strongCyan);
+}
+
+.input-tip.invalid {
+    border: 2px solid #E17457;
 }
 
 .input-tip::placeholder {
@@ -295,12 +325,17 @@ input[type=number] {
     padding: 9.5px 0;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color .2s ease-in-out;
 }
 
 @media (min-width: 1200px) {
     .btn-reset {
         margin-top: 7.625rem;
     }
+}
+
+.btn-reset:hover {
+    background-color: #9FE8DF;
 }
 
 .btn-reset:disabled {
