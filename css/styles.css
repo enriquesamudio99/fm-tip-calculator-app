@@ -337,6 +337,7 @@ input[type=number] {
 
 .btn-reset:disabled {
     background-color: #0D686D;
-    color: rgba(0, 71, 75, .35);
+    color: #00474B;
+    opacity: 35%;
     cursor: not-allowed;
 }
